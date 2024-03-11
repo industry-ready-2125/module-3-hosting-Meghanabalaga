@@ -1,47 +1,293 @@
-<html>
-    <head>
-        <title>Signin Page</title>
-        <style>
-          body{
-            background-color:antiquewhite;
-            margin:20px;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            text-justify: auto;
-            border-style: outset;
-            align-items: center;
-            font-size: medium;
-          }
-          button {
-                background-color:palevioletred;
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 10px;
-            }
+<!DOCTYPE html>
+<html lang="en">
 
-        </style>
-    </head>
-    <body>
-        <center style="background-color: crimson;"><h1>Sign up</h1></center>
-        <label for="email">GMail:</label>
-       <input type="email" name="email"><br>
-       <br>
-       <label for="password">Password:</label>
-       <input type="password" name="password"><br>
-       <br>
-       <label for="confirm_password">Confirm_password:</label>
-       <input type="password" name="Confirm_password"><br><br>
-        <a href="page02.html"><button>Login Page</button></a>
-        or
-        <a href="page03.html"><button>Forgot Password Page</button></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+   
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
 
-    </body>
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('https://www.walderwellness.com/wp-content/uploads/2023/08/Cherry-Tomato-Pasta-Sauce-Walder-Wellness-3-680x1020.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 50px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('https://img.lovepik.com/photo/48005/0679.jpg_wh860.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('https://www.shutterstock.com/image-photo/contact-us-customer-support-hotline-600nw-2067737414.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://c8.alamy.com/comp/FW5BX3/cartoon-funny-italian-chef-cartoon-holding-platter-with-ok-sign-FW5BX3.jpg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="page03.html">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="page02.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyOnlineMeal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus. </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/1724px-Apple_logo_grey.svg.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_700,h_400/http://assets.designhill.com/design-blog/wp-content/uploads/2022/12/3-2.png" alt="Our Client">
+            </div>
+          
+            <div class="client-item">
+                <img src="https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png">
+            </div>
+            <div class="client-item">
+                <img src="https://w7.pngwing.com/pngs/432/138/png-transparent-hewlett-packard-laptop-hp-elitebook-computer-software-logo-presentation-template-thumbnail.png" alt="Our Client">
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myOnlineMeal.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
 </html>
